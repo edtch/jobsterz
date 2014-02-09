@@ -1,34 +1,32 @@
-<p id="notice"><%= notice %></p>
+<header class="sixteen columns">
+<h1><%= @person.first_name %> <%= @person.last_name %></h1>
+  
+  <h2>GOTH GOTH GOTH</h2>
+  <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Eug%C3%A8ne_Ferdinand_Victor_Delacroix_006.jpg/800px-Eug%C3%A8ne_Ferdinand_Victor_Delacroix_006.jpg">
+</header>
 
-<p>
-  <strong>First name:</strong>
-  <%= @person.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @person.last_name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @person.description %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @person.email %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @person.phone_number %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @person.active %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<div class ="about sixteen columns">
+  <p>
+    <%= @person.description %> 
+  </p>
+</div> <!-- close about div -->
+<div class="info">
+     <div class="contact nine columns">
+     <h3>Welcome 2 Hell</h3>
+     <ul>
+       <li>
+         <%= @person.email %>
+       </li>
+       <li>
+         <%= @person.phone_number %>
+       </li>
+</ul>
+     </div> <!-- close contact div -->
+  <div class="links seven columns">
+    <h4>Links</h4>
+    <%= link_to "All People", people_path %>
+    <%= link_to "Edit Person", edit_person_path(@person) %>
+   
+  </div>
+     </div> <!-- close info div -->
+     
